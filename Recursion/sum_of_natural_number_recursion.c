@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * sum - A function that add all natural number including thr given number
+ * sum - A recursive function that add all
+ *       natural number including thr given number
  * @n: input natural number
  *
  *
@@ -27,9 +28,8 @@ int sum(int n)
 int main(void)
 {
 	int result;
-        
-	result = sum(5);
 
+	result = sum(5);
 	printf("%d\n", result);
 
 	return (0);
