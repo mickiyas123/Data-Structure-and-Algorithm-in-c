@@ -10,14 +10,12 @@
 
 int sum(int n)
 {
-	int totalsum = 0;
-
-	for (int i = 1; i <= n; i++)
+	if (n > 0)
 	{
-		totalsum += i;
+		return (sum(n - 1) + n);
 	}
 
-	return (totalsum);
+	return (0);
 }
 
 /**
@@ -29,8 +27,9 @@ int sum(int n)
 int main(void)
 {
 	int result;
-
+        
 	result = sum(5);
+
 	printf("%d\n", result);
 
 	return (0);
