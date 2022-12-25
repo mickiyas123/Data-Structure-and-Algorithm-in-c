@@ -1,13 +1,13 @@
 #include "array.h"
 
 /**
- * Display - loop over an array display values
+ * display - loop over an array display values
  *
  * @arr: structure that has array
  * Time Compleixty -------> o(n)
 */
 
-void Display(struct Array arr)
+void display(struct Array arr)
 {
 	int i;
 
@@ -20,14 +20,14 @@ void Display(struct Array arr)
 }
 
 /**
- * Append - Add element at the end of an array
+ * append - Add element at the end of an array
  *
  * @arr: Pointer to a structure
  * @value: New value to be inserted at index
  * Time Compleixty -------> o(1)
 */
 
-void Append(struct Array *arr, int value)
+void append(struct Array *arr, int value)
 {
 	if (arr->length < arr->size)
 	{
@@ -37,7 +37,7 @@ void Append(struct Array *arr, int value)
 }
 
 /**
- * Insert - Add element at any given position within the array
+ * insert - Add element at any given position within the array
  *
  * @arr: Array inside a structure
  * @index: Array position to be inserted at
@@ -46,7 +46,7 @@ void Append(struct Array *arr, int value)
  *                 -------> Worst Case = o(n)
 */
 
-void Insert(struct Array *arr, int index, int value)
+void insert(struct Array *arr, int index, int value)
 {
 	int i;
 
@@ -61,7 +61,7 @@ void Insert(struct Array *arr, int index, int value)
 }
 
 /**
- * Delete - Delete array element at given index
+ * delete - Delete array element at given index
  *
  * @arr: Pointer to a struct
  * @index: Postion of array element to be removed
@@ -71,7 +71,7 @@ void Insert(struct Array *arr, int index, int value)
  * Return: Removed value or 0
 */
 
-int Delete(struct Array *arr, int index)
+int delete(struct Array *arr, int index)
 {
 	int i;
 	int x = arr->A[index];
@@ -87,6 +87,7 @@ int Delete(struct Array *arr, int index)
 	return (0);
 }
 
+
 /**
  * main - Entry point
  *
@@ -97,7 +98,5 @@ int main(void)
 {
 	struct Array arr = {{1, 2, 3, 4, 5}, 20, 5};
 
-
-	printf("%d ", Delete(&arr, 0));
-	Display(arr);
+	LinearSearch(&arr, 3);
 }
