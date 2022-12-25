@@ -22,17 +22,11 @@ int binarySearch(int arr[], int value, int low, int high)
 		middle = (low + high) / 2;
 
 		if (value == arr[middle])
-		{
 			return (middle);
-		}
 		else if (value < arr[middle])
-		{
 			high = middle - 1;
-		}
-		else if (value > arr[middle])
-		{
+		else
 			low = middle + 1;
-		}
 	}
 	return (-1);
 }
