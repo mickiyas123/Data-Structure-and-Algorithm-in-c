@@ -33,11 +33,8 @@ int binarySearch(int arr[], int value, int low, int high)
         {
             low = middle + 1;
         }
-        else
-        {
-            return (-1);
-        }
      }
+     return (-1);
 }
 
 
