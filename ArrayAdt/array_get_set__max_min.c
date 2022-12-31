@@ -72,22 +72,6 @@ int min(struct Array arr)
 }
 
 /**
- * sum - Add of all array elements
- * @arr: input array
- *
- * Return: sum of elements
-*/
-
-int sum(struct Array arr)
-{
-	int i, sum = 0;
-	
-	for (i = 0; i < arr.length; i++)
-		sum += arr.A[i];
-	return (sum);
-}
-
-/**
  * main - Entry point
  *
  * Return: Always 0 succesful
