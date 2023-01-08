@@ -12,6 +12,9 @@ void insert_in_sorted_array(struct Array *arr, int value)
 {
 	int i = arr->length - 1;
 
+	if (arr->length == arr->size)
+		return;
+
 	while (arr->A[i] > value)
 	{
 		arr->A[i + 1] = arr->A[i];
